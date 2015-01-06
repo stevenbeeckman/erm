@@ -19,6 +19,13 @@ angular.module("ermApp", [])
 							, length: 150
 							, relations: []
 						}
+						,{
+							id: 9
+							, name: "BUDGET_LINE_ID"
+							, type: "int"
+							, length: 11
+							, relations: []
+						}
 					]
 				}
 			,{
