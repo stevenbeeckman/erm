@@ -31,7 +31,7 @@
 					<td>
 						<ul class="list-unstyled">
 							<li ng-repeat="relation in attribute.relations">
-								{{relation.fqn}} <a href="" ng-click="">x</a>
+								{{relation.fqn}} <a href="" ng-click="attribute.relations.splice($index, 1)">x</a>
 							</li>
 							<li>
 								<a href="" ng-click="chooseRelation()">Add relation</a>
