@@ -24,12 +24,17 @@ angular.module("ermApp", [])
 				, name: "MRQR_INVOICES"
 				, attributes: [
 						{
-							id: 4
+							id: 3
 							, name: "ID"
 							, type: "int"
 							, length: 11
 						}
 						,{
+							id: 4
+							, name: "ORDER_ID"
+							, type: "int"
+							, length: 1
+						},{
 							id: 5
 							, name: "INVOICE_NAME"
 							, type: "varchar"

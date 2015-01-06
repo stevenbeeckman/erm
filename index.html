@@ -16,10 +16,20 @@
 	</head>
 	<body>
 		<h1>Entity Relationship Manager</h1>
-		<div class="container">
-			<label>Entity name: </label>
-			<input type="text" ng-model="entityName" placeholder="Enter the entity's name here">
-			{{entityName}}
+		<div class="container" ng-controller="ERMController">
+			<h3>{{entities[1].name}}</h3>
+			<table class="table table-striped">
+				<tr>
+					<th>Attribute id</th>
+					<th>Attribute name</th>
+					<th>Related to</th>
+				</tr>
+				<tr ng-repeat="attribute in entities[1].attributes">
+					<td>{{attribute.id}}</td>
+					<td>{{attribute.name}}</td>
+					<td></td>
+				</tr>
+			</table>
 		</div>
 	</body>
 </html>
