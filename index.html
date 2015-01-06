@@ -34,7 +34,7 @@
 								{{relation.fqn}} <a href="" ng-click="attribute.relations.splice($index, 1)">x</a>
 							</li>
 							<li>
-								<a href="" ng-click="chooseRelation()">Add relation</a>
+								<input ng-model="newfqn"> <a href="" ng-click="attribute.relations.push({fqn: newfqn}); newfqn='';">add</a>
 							</li>
 						</ul>
 					</td>

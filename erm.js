@@ -76,13 +76,14 @@ angular.module("ermApp", [])
 		];
 
 		$scope.selectedEntity = $scope.entities[1];
+		$scope.newfqn = "";
 
 		$scope.chooseRelation = function(){
 
 		};
 
 		$scope.addRelation = function(){
-
+			attribute.relations.push($scope.fqn);
 		};
 
 		$scope.changeEntity = function(){
