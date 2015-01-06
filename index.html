@@ -29,10 +29,14 @@
 					<td>{{attribute.id}}</td>
 					<td>{{attribute.name}}</td>
 					<td>
-						<p ng-repeat="relation in attribute.relations">
-							{{relation.entity}}.{{relation.attribute}}
-						</p>
-						<a href="" ng-click="chooseRelation()">Add relation</a>
+						<ul class="list-unstyled">
+							<li ng-repeat="relation in attribute.relations">
+								{{relation.fqn}} <a href="" ng-click="">x</a>
+							</li>
+							<li>
+								<a href="" ng-click="chooseRelation()">Add relation</a>
+							</li>
+						</ul>
 					</td>
 				</tr>
 			</table>

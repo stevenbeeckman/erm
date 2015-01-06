@@ -37,7 +37,7 @@ angular.module("ermApp", [])
 							, name: "ORDER_ID"
 							, type: "int"
 							, length: 1
-							, relations: [{entity: "MRQR_ORDERS", attribute: "ID"}]
+							, relations: [{fqn: "MRQR_ORDERS.ID"}]
 						},{
 							id: 5
 							, name: "INVOICE_NAME"
