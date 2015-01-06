@@ -17,14 +17,15 @@
 	<body>
 		<div class="container" ng-controller="ERMController">
 			<h1>Entity Relationship Manager</h1>
-			<h3>{{entities[1].name}}<span id="change_entity" style="display: none;"><form</span><small><a href="" ng-click="changeEntity()">switch entity</a></small></h3>
+			<select class="form-control" ng-model="selectedEntity" ng-options="entity.name for entity in entities">
+			</select>
 			<table class="table table-striped">
 				<tr>
 					<th>Attribute id</th>
 					<th>Attribute name</th>
 					<th>Related to</th>
 				</tr>
-				<tr ng-repeat="attribute in entities[1].attributes">
+				<tr ng-repeat="attribute in selectedEntity.attributes">
 					<td>{{attribute.id}}</td>
 					<td>{{attribute.name}}</td>
 					<td>
