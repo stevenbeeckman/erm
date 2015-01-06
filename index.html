@@ -15,9 +15,9 @@
 
 	</head>
 	<body>
-		<h1>Entity Relationship Manager</h1>
 		<div class="container" ng-controller="ERMController">
-			<h3>{{entities[1].name}}</h3>
+			<h1>Entity Relationship Manager</h1>
+			<h3>{{entities[1].name}} <small><a href="" ng-click="changeEntity()">switch entity</a></small></h3>
 			<table class="table table-striped">
 				<tr>
 					<th>Attribute id</th>
@@ -27,7 +27,12 @@
 				<tr ng-repeat="attribute in entities[1].attributes">
 					<td>{{attribute.id}}</td>
 					<td>{{attribute.name}}</td>
-					<td></td>
+					<td>
+						<p ng-repeat="relation in attribute.relations">
+							{{relation.entity}}.{{relation.attribute}}
+						</p>
+						<a href="" ng-click="chooseRelation()">Add relation</a>
+					</td>
 				</tr>
 			</table>
 		</div>

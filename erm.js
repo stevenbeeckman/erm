@@ -10,12 +10,14 @@ angular.module("ermApp", [])
 							, name: "ID"
 							, type: "int"
 							, length: 11
+							, relations: []
 						}
 						,{
 							id: 2
 							, name: "ORDER_NAME"
 							, type: "varchar"
 							, length: 150
+							, relations: []
 						}
 					]
 				}
@@ -28,23 +30,27 @@ angular.module("ermApp", [])
 							, name: "ID"
 							, type: "int"
 							, length: 11
+							, relations: []
 						}
 						,{
 							id: 4
 							, name: "ORDER_ID"
 							, type: "int"
 							, length: 1
+							, relations: [{entity: "MRQR_ORDERS", attribute: "ID"}]
 						},{
 							id: 5
 							, name: "INVOICE_NAME"
 							, type: "varchar"
 							, length: 150
+							, relations: []
 						}
 						,{
 							id: 6
 							, name: "BUDGET_LINE_ID"
 							, type: "int"
 							, length: 11
+							, relations: []
 						}
 					]
 				}
@@ -56,14 +62,24 @@ angular.module("ermApp", [])
 							id: 7
 							, name: "ID"
 							, type: "int"
+							, relations: []
 						}
 						,{
 							id: 8
 							, name: "BUDGET_LINE_NAME"
 							, type: "varchar"
 							, length: 150
+							, relations: []
 						}
 					]
 				}
 		];
+
+		$scope.chooseRelation = function(){
+
+		};
+
+		$scope.addRelation = function(){
+
+		}
 	}]);
