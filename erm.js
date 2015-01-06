@@ -75,11 +75,17 @@ angular.module("ermApp", [])
 				}
 		];
 
+		$scope.selectedEntity = $scope.entities[1];
+
 		$scope.chooseRelation = function(){
 
 		};
 
 		$scope.addRelation = function(){
 
-		}
+		};
+
+		$scope.changeEntity = function(){
+
+		};
 	}]);

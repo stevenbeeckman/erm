@@ -17,7 +17,7 @@
 	<body>
 		<div class="container" ng-controller="ERMController">
 			<h1>Entity Relationship Manager</h1>
-			<h3>{{entities[1].name}} <small><a href="" ng-click="changeEntity()">switch entity</a></small></h3>
+			<h3>{{entities[1].name}}<span id="change_entity" style="display: none;"><form</span><small><a href="" ng-click="changeEntity()">switch entity</a></small></h3>
 			<table class="table table-striped">
 				<tr>
 					<th>Attribute id</th>
