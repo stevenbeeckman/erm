@@ -150,7 +150,7 @@ angular.module("ermApp", [])
 			var elements = new Array();
 			for(i = 0; i < relations.length; i++){
 				elements.push(element(erd.Entity, width/2 + 80*Math.cos((360/relations.length)*i/180*Math.PI), height/2 + 80*Math.sin((360/relations.length)*i/180*Math.PI), relations[i].entityName));
-				link(centerElement, elements[i]);
+				link(centerElement, elements[i]).cardinality(relations[i].entityName + "." + relations[i].name);
 			};
 		}
 

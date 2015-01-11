@@ -34,7 +34,7 @@
 					<td>
 						<ul class="list-unstyled">
 							<li ng-repeat="relation in attribute.relations">
-								{{relation.entityName}}.{{relation.name}} <a href="" ng-click="attribute.relations.splice($index, 1)">x</a>
+								{{relation.entityName}}.{{relation.name}} <a href="" ng-click="attribute.relations.splice($index, 1); drawERD()">x</a>
 							</li>
 							<li>
 								<select class="form-inline" ng-model="relatedEntity" ng-options="entity.name for entity in entities">
@@ -42,7 +42,7 @@
 								<select class="form-inline" ng-model="relatedAttribute" ng-options="attribute.name for attribute in relatedEntity.attributes">
 								</select>
 								&nbsp;
-								<a href="" ng-click="attribute.relations.push(relatedAttribute)">add</a>
+								<a href="" ng-click="attribute.relations.push(relatedAttribute); drawERD()">add</a>
 							</li>
 						</ul>
 					</td>
