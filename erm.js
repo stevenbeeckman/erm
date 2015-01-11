@@ -8,6 +8,7 @@ angular.module("ermApp", [])
 						{
 							id: 1
 							, name: "ID"
+							, entityName: "MRQR_ORDERS"
 							, type: "int"
 							, length: 11
 							, relations: []
@@ -15,6 +16,7 @@ angular.module("ermApp", [])
 						,{
 							id: 2
 							, name: "ORDER_NAME"
+							, entityName: "MRQR_ORDERS"
 							, type: "varchar"
 							, length: 150
 							, relations: []
@@ -22,6 +24,7 @@ angular.module("ermApp", [])
 						,{
 							id: 9
 							, name: "BUDGET_LINE_ID"
+							, entityName: "MRQR_ORDERS"
 							, type: "int"
 							, length: 11
 							, relations: []
@@ -35,6 +38,7 @@ angular.module("ermApp", [])
 						{
 							id: 3
 							, name: "ID"
+							, entityName: "MRQR_INVOICES"
 							, type: "int"
 							, length: 11
 							, relations: []
@@ -42,12 +46,14 @@ angular.module("ermApp", [])
 						,{
 							id: 4
 							, name: "ORDER_ID"
+							, entityName: "MRQR_INVOICES"
 							, type: "int"
 							, length: 1
 							, relations: [
 											{
 												id: 1
 												, name: "ID"
+												, entityName: "MRQR_ORDERS"
 												, type: "int"
 												, length: 11
 												, relations: []
@@ -56,6 +62,7 @@ angular.module("ermApp", [])
 						},{
 							id: 5
 							, name: "INVOICE_NAME"
+							, entityName: "MRQR_INVOICES"
 							, type: "varchar"
 							, length: 150
 							, relations: []
@@ -63,6 +70,7 @@ angular.module("ermApp", [])
 						,{
 							id: 6
 							, name: "BUDGET_LINE_ID"
+							, entityName: "MRQR_INVOICES"
 							, type: "int"
 							, length: 11
 							, relations: []
@@ -76,12 +84,14 @@ angular.module("ermApp", [])
 						{
 							id: 7
 							, name: "ID"
+							, entityName: "MRQR_BUDGET_LINES"
 							, type: "int"
 							, relations: []
 						}
 						,{
 							id: 8
 							, name: "BUDGET_LINE_NAME"
+							, entityName: "MRQR_BUDGET_LINES"
 							, type: "varchar"
 							, length: 150
 							, relations: []
