@@ -20,7 +20,7 @@
 	<body>
 		<div class="container" ng-controller="ERMController">
 			<h1>Entity Relationship Manager</h1>
-			<select class="form-control" ng-model="selectedEntity" ng-options="entity.name for entity in entities">
+			<select class="form-control" ng-model="selectedEntity" ng-options="entity.name for entity in entities" ng-change="drawERD()">
 			</select>
 			<table class="table table-striped">
 				<tr>

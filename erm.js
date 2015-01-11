@@ -106,6 +106,39 @@ angular.module("ermApp", [])
 
 		$scope.newfqn = "";
 
+		$scope.drawERD = function(){
+			$("#erd").html("");
+
+			var width = 800;
+			var height = 200;
+
+			var graph = new joint.dia.Graph;
+			var paper = new joint.dia.Paper({
+				el: $("#erd")
+				, width: width
+				, height: height
+				, gridSize: 1
+				, model: graph
+			});
+
+			var erd = joint.shapes.erd;
+
+			var element = function(elm, x, y, label){
+				var cell = new elm({position: {x: x, y: y}
+									, attrs: {text: { text: label}}});
+				graph.addCell(cell);
+				return cell;
+			};
+
+			var link = function(elm1, elm2){
+				var myLink = new erd.Line({ source: {id: elm1.id}, target: {id: elm2.id}});
+				graph.addCell(myLink);
+				return myLink;
+			};
+
+			var centerElement = element(erd.Entity, width/2, height/2, $scope.selectedEntity.name);
+		}
+
 		$scope.chooseRelation = function(){
 
 		};
