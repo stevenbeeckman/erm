@@ -137,6 +137,21 @@ angular.module("ermApp", [])
 			};
 
 			var centerElement = element(erd.Entity, width/2, height/2, $scope.selectedEntity.name);
+
+			// see if there are relations
+			
+			var relations = new Array();
+			$scope.selectedEntity.attributes.forEach(function(attribute){
+				attribute.relations.forEach(function(relation){
+					relations.push(relation);
+				});
+			});
+
+			var elements = new Array();
+			for(i = 0; i < relations.length; i++){
+				elements.push(element(erd.Entity, width/2 + 80*Math.cos((360/relations.length)*i/180*Math.PI), height/2 + 80*Math.sin((360/relations.length)*i/180*Math.PI), relations[i].entityName));
+				link(centerElement, elements[i]);
+			};
 		}
 
 		$scope.chooseRelation = function(){
