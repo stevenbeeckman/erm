@@ -44,7 +44,15 @@ angular.module("ermApp", [])
 							, name: "ORDER_ID"
 							, type: "int"
 							, length: 1
-							, relations: [{fqn: "MRQR_ORDERS.ID"}]
+							, relations: [
+											{
+												id: 1
+												, name: "ID"
+												, type: "int"
+												, length: 11
+												, relations: []
+											}
+										]
 						},{
 							id: 5
 							, name: "INVOICE_NAME"
@@ -83,6 +91,9 @@ angular.module("ermApp", [])
 		];
 
 		$scope.selectedEntity = $scope.entities[1];
+		$scope.relatedEntity = new Object();
+		$scope.relatedAttribute = new Object();
+
 		$scope.newfqn = "";
 
 		$scope.chooseRelation = function(){
@@ -90,7 +101,7 @@ angular.module("ermApp", [])
 		};
 
 		$scope.addRelation = function(){
-			attribute.relations.push($scope.fqn);
+			attribute.relations.push($scope.relatedAttribute);
 		};
 
 		$scope.changeEntity = function(){
